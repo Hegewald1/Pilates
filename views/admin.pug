@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div.forms
+        p  Du er logget ind som admin
+        div
+            form( action='/registercourse', method='get')
+                div
+                button(type='submit') Opret hold
+        div
+            form( action='/courses', method='get')
+                div
+                button(type='submit') Se hold
+        div
+            form( action='/logout', method='get')
+                div
+                button(type='submit') Logout

@@ -1,0 +1,33 @@
+extends layout.pug
+
+block content
+    div.forms
+        form(action='/registercourse' method='POST')
+            if errors
+                    each error in errors
+                        p=error.msg
+            div
+                label(for='courseName') Navn
+                input#courseName(type='text' name='courseName' required='')
+            div
+                label(for='level') Niveau
+                input#level(type='text' name='level' required='')
+            div
+                label(for='seats') Antal pladser
+                input#seats(type='number' name='seats' required='')
+            div
+                label(for='place') Lokale
+                input#place(type='text' name='place' required='')
+            div
+                label(for='date') Tid
+                input#datetime( name='date' required='')
+            
+            button(type='submit') Registrering
+    
+
+    script(src='/datetimepicker/jquery.js', type ='text/javascript')
+    script(src='/datetimepicker/jquery.datetimepicker.full.js', type ='text/javascript')
+    script.
+        $('#datetime').datetimepicker({
+            step: 15
+        });

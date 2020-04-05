@@ -1,0 +1,395 @@
+:root {
+  --lightBlue: rgb(179, 206, 234);
+  --darkBlue: rgb(14, 104, 171);
+  --white: #fff;
+  --black: #111;
+  --borderShadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --cornflowerblue: #6495ed;
+}
+
+/* LAYOUT */
+.layoutContainer {
+  display: grid;
+  grid-template-columns: 12% 25% 26% 25% 12%;
+  grid-template-rows: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--darkBlue); 
+}
+
+.layoutContainer .loginLink {
+  display: grid;
+  grid-column-start: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--white);
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
+
+/* Skifter ikke rigtigt endnu!!!!!!!! */
+.middleBar .current a {
+  background: var(--darkBlue);
+  font-weight: bold;
+}
+
+/*LAYOUT CHANGES THE COLOR OF THE ITEM IN FOCUS IN THE MENU BAR */
+.middleBar a:hover {
+  background: var(--darkBlue);
+  color: var(--whitexq);
+}
+
+/* LAYOUT GRID COORDINATES   */
+.middleBar {
+  display: grid;
+  grid-template-columns: repeat(8, 12.5%);
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-auto-rows: auto;
+  background: var(--white);
+  
+}
+
+/* LAYOUT STYLES THE MENU BAR */
+.middleBar .menuBar {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;  
+  text-align: center;
+  align-items: center;
+  font-size: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--white);
+  background: var(--lightBlue);
+  box-shadow: var(--borderShadow);
+}
+
+/* LAYOUT BACKGROUND COLOR FOR THE WHOLE PAGE, COVERS THE EDGES */
+body {
+  background: var(--lightBlue);
+}
+
+/* LAYOUT LEFT SIDEBAR */
+.leftBar {
+  display: grid;
+  background: var(--lightBlue);
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 10;
+}
+
+/* LAYOUT RIGHT SIDEBAR */
+.rightBar {
+  display: grid;
+  grid-column-start: 5;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 10;
+  background: var(--lightBlue);
+}
+
+/* FRONTPAGE PICTURE */
+.middleBar #pictureForside {
+  display: grid;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  padding-top: 20px;
+   width: 600px;  
+}
+
+/* FOTO CREDIT */
+#fotoCreditForside {
+  display: grid;
+  grid-column-start: 3;
+  grid-row-start: 4;
+  grid-row-end: 4; 
+}
+
+/* FORSIDE OVERSKRIFT */
+.layoutContainer h1 {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  text-align: center;
+  font-size: 3em;
+}
+
+/* FORSIDE BOX-A*/
+#box-a {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 5;
+  text-align: center;
+  padding: 1.5rem 2rem; /* 1.5rem is top and buttom, and 2rem is left and right */
+  box-shadow: var(--borderShadow);
+}
+
+/* FORSIDE BOX-B */
+#box-b {
+  display: grid;
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 5;
+  grid-row-end: 5;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 1.5rem 2rem; /* 1.5rem is top and buttom, and 2rem is left and right */
+  box-shadow: var(--borderShadow);
+  color: var(--cornflowerblue);
+
+}
+
+/* FORSIDE BOX-B QUOTER TEXT */
+#box-b p1 {
+  font-size: 15px;
+  color: cornflowerblue;
+  font-style: italic;
+}
+
+/* OmPilates PICTURE */
+.middleBar #pictureOmPilatesTop {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  padding-top: 20px;
+  width: 700px; 
+}
+
+.middleBar #text-box {
+display:grid;
+grid-column-start: 2;
+grid-column-end: 6;
+grid-row-start: 4;
+grid-row-end: 6;
+}
+
+.middleBar #pictureOmPilatesBund {
+ display: grid;
+ grid-column-start: 2;
+ grid-column-end: 8;
+ grid-row-start: 6;
+ grid-row-end: 6;
+ padding-top: 20px;
+ width: 700px; 
+}
+
+#fotoCreditOmPilates {
+ display: grid;
+ grid-column-start: 2;
+ grid-column-end: 4;
+ grid-row-start: 8;
+ grid-row-end: 8; 
+}
+
+/* Nyheder PICTURE */
+.middleBar #pictureNyheder  {
+  display: grid;
+  grid-column-start: 2;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  align-items: center;
+  padding-top: 20px;
+  width: 700px; 
+ }
+
+ .middleBar #text-boxNyheder {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start:3;
+  grid-row-end: 3;
+}
+
+.middleBar #fotoCreditNyheder {
+  display: grid;
+  grid-column-start: 2;
+  grid-row-start: 5;
+  grid-row-end: 5; 
+}
+
+.middleBar #pictureOmHoldene {
+  display: grid;
+  grid-column-start: 2;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  align-items: center;
+  padding-top: 20px;
+  width: 700px; 
+ }
+ 
+ /* FOTO CREDIT */
+ #fotoCreditOmHoldene {
+   display: grid;
+   grid-column-start: 2;
+   grid-row-start: 4;
+   grid-row-end: 4;
+ }
+
+ .middleBar #text-boxOmHoldene {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 7;
+  grid-row-start:5;
+  grid-row-end: 5;
+}
+
+/* HOLDPLAN */
+.boxesHoldplan {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column-start: 2;
+  grid-column-end: 7;
+  grid-gap: 20px;
+  padding-top: 20px;  
+}
+
+.box1 {
+  margin-bottom: 5rem;
+  box-shadow: var(--borderShadow);
+  text-align: center;
+}
+
+.box2 {
+  margin-bottom: 5rem;
+  box-shadow: var(--borderShadow);
+  text-align: center;
+}
+
+.box3 {
+  margin-bottom: 5rem;
+  box-shadow: var(--borderShadow);
+  text-align: center;
+}
+
+/* PUG PRISER */
+#lineSeperator {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+#picturePriser {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  padding-top: 20px;
+}
+
+.priserTekst {
+  display: grid;
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  padding-bottom: 50px;
+}
+
+.priserSkema {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 4;
+  grid-gap: 20px;
+  padding-bottom: 20px;
+}
+
+#priserLeft {
+  grid-column-start: 1;
+}
+
+#priserMiddle {
+  grid-column-start: 2;
+}
+
+#priserRight {
+  grid-column-start: 3;
+}
+
+.middleBar #underviserOmTineHoeeg {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.middleBar #underviserPilatesWorkshop {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+
+.middleBar #underviserPilatesKurser {
+  display: grid;
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+
+.middleBar #pictureUnderviser {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 6;
+}
+
+.middleBar #underviserMedVenligHilsen {
+  display: grid;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 6;
+}
+
+.welcome {
+  display: grid;
+  grid-column-start: 2;
+  position: relative;
+}
+.welcome h4 {
+  font-size: 1.8rem;
+}
+
+#welcomeLink {
+  text-decoration: none;
+}
+
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-row-start: 10;
+  grid-column-start: 1;
+  grid-column-end: 9;
+  background-color: var(--darkBlue);
+}
+
+footer a {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  align-items: center;
+  font-size: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--white);
+}
+
+

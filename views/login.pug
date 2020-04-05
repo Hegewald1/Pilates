@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content
+    div.forms
+        div
+            form(action='/login' method='POST')
+                if (message.length > 0)
+                    #alert
+                    p= message
+                div#form-groups
+                    label(for='email') Email
+                    input#email(type='email' name='email' required='')
+                div#form-groups
+                    label(for='password') Password
+                    input#password(type='password' name='password' required='')
+                button(type='submit') Login
+        div
+            form( action='/register', method='get')
+                button(type='submit') Opret bruger
+        div
+            form( action='/loginadmin', method='get')
+                button(type='submit') Admin login

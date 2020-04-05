@@ -1,0 +1,72 @@
+extends layout.pug
+
+block content
+    div.forms
+        div
+            form( action='/course/'+course._id, method='POST')
+                div
+                    label(for='name') Navn
+                    input#courseName(type='text' name='courseName' value=course.courseName)
+                div
+                    label(for='level') Niveau
+                    input#level(type='text' name='level' value=course.level)
+                div
+                    label(for='seats') Antal pladser
+                    input#seats(type='number' name='seats' value=course.seats)
+                div
+                    label(for='date') Tid
+                    input#datetime( name='date' required='' value=course.date)
+                div
+                    label(for='place') Lokale
+                    input#place(type='text' name='place' value=course.place)
+                div
+                    - var idl = 1;
+
+                    each lesson in lessons
+                        div
+                            label #{lesson.lessonName}
+                            input(type="hidden" name="lessonId" value=lesson._id)
+                            input#place(type='text' name='lessonPlace' value=lesson.place)
+                            input(id=idl type='text' name='lessonDate' required='' value=lesson.date)
+                            a.button(href = ("/studentsLesson/" +lesson._id)) Rediger deltagere
+                            - idl=idl+1
+                div
+                button(type='submit') Opdater
+        div
+            a.button(href = ("/studentsCourse/" +course._id)) Rediger deltagere
+        div
+            form( action='/delete/'+course._id, method='POST')
+                button(type='submit') Slet
+    div
+        button#goback Tilbage
+    script(src='/datetimepicker/jquery.js', type ='text/javascript')
+    script(src='/datetimepicker/jquery.datetimepicker.full.js', type ='text/javascript')
+    script.
+        $('#datetime').datetimepicker({
+            step: 15
+        });
+        $('#1').datetimepicker({
+            step: 15
+        });
+        $('#2').datetimepicker({
+            step: 15
+        });
+        $('#3').datetimepicker({
+            step: 15
+        });
+        $('#4').datetimepicker({
+            step: 15
+        });
+        $('#5').datetimepicker({
+            step: 15
+        });
+        $('#6').datetimepicker({
+            step: 15
+        });
+        $('#7').datetimepicker({
+            step: 15
+        });
+        $('#8').datetimepicker({
+            step: 15
+        });
+

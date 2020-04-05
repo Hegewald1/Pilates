@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+    div.forms
+        form(action='/loginadmin' method='POST')
+            if (message.length > 0)
+                #alert
+                p= message
+            div#form-groups
+                label(for='email') Email
+                input#email(type='email' name='email' required='')
+            div#form-groups
+                label(for='password') Password
+                input#password(type='password' name='password' required='')
+            button(type='submit') Login

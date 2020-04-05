@@ -1,0 +1,24 @@
+extends layout.pug
+
+block content
+    div.forms
+        form(action='/register' method='POST')
+            if errors
+                    each error in errors
+                        p=error.msg
+            div
+                label(for='name') Navn
+                input#name(type='text' name='name' required='')
+            div
+                label(for='phone') Telefon
+                input#phone(type='text' name='phone' required='')
+            div
+                label(for='email') Email
+                input#email(type='email' name='email' required='')
+            div
+                label(for='password') Password
+                input#password(type='password' name='password' required='')
+            div
+                label(for='password2') Gentag Password
+                input#password(type='password' name='password2' required='')
+            button(type='submit') Register

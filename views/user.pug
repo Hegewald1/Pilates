@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    div.forms
+        p  Du er logget ind
+        div
+        form( action='/logout', method='get')
+            div
+            button(type='submit') Logout

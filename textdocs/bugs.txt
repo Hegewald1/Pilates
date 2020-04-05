@@ -1,0 +1,12 @@
+Bugs: 
+B1: Når man tilføjer en deltager til et course tjekker den om der er plads på holdet men ikke de
+individuelle lessons 
+Fix: Ved ikke om der er et nemt fix på det. Måske skal vi bare nævne det i rapporten.
+Det er tros alt kun Tine der kan tilføje brugere, og så længe hun gør det når hun opretter kursuset
+B2: Test duer kun når man bruger localhost. den får problemer med cloud. Grundet den ikke udføre tingene
+ i samme rækkefølge som jeg har lavet testene, da den modtager for mange querys og update på samme tid
+Fix: Kaj siger det er fint, vi skal bare skrive det i rapporten.
+ 
+Skriv gerne bugs på hvis i finder dem:) 
+Skriv gerne fix hvis i fixer noget så vi andre kan se hvad der er lavet om:) 
+ 

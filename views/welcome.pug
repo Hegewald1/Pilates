@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .welcome
+    h4 Velkommen #{name}
+    p Du er nu registreret som ny bruger 
+    p Fortsæt til forsiden
+    form(action = '/forside', method ='get')
+      button(type = "submit") Klik her!
+    br
